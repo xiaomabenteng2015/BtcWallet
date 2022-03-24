@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.edu.bgewallet">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BgeWallet">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="sensorPortrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--  imToken  库测试   -->
+        <activity
+            android:name=".imtoken.ImtokenTest1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".imtoken.CreateWalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".imtoken.UseWalletActivity"
+            android:screenOrientation="portrait" />
+        <!--  BitcoinJ  库测试   -->
+        <activity
+            android:name=".BitcoinTestActivity"
+            android:screenOrientation="sensorPortrait" />
+        <!--  BitcoinJ  库测试 demo1  -->
+        <activity
+            android:name=".bitcoinjtest.BitcoinJActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+        <!--  BitcoinJ  库测试 demo2  -->
+        <activity
+            android:name=".bitcoinjtest2.BitcoinWalletActivity"
+            android:screenOrientation="sensorPortrait" />
+
+        <activity
+            android:name=".bitcoinjtest2.ImportMnemonicWalletActivity"
+            android:screenOrientation="sensorPortrait" />
+
+        <service android:name=".bitcoinjtest2.BlockChainService" />
+
+        <activity
+            android:name=".bitcoinjtest2.EthereumWalletActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".bitcoinjtest2.KeyStoreActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".bitcoinjtest2.PrivateKeyActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".bitcoinjtest2.MnemonicActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">BtcWallet</string>
+
+    <string name="init_tip">正在初始化对等网络… \n可能需要15分钟\n耐心等待，这是唯一的一次</string>
+    <string name="show_qr_code">向发送方展示此二维码</string>
+    <string name="about_title">关于</string>
+    <string name="got_it">知道了</string>
+    <string name="my_wallet_address">我的钱包地址</string>
+    <string name="copied">复制成功</string>
+    <string name="show_this_address_to_sender">充币地址</string>
+    <string name="withdraw">提币</string>
+    <string name="send">发送</string>
+    <string name="receive">接收</string>
+    <string name="amount">数量: </string>
+    <string name="to">提币地址: </string>
+    <string name="select_recipient">请填写收款地址 </string>
+    <string name="select_valid_amount">请填写可用数量 </string>
+    <string name="you_got_not_enough_coins">可用数量不足 </string>
+    <string name="btc_wallet">BTC 钱包</string>
+
+    <string name="scan_qr">扫码</string>
+    <string name="my_qr_code">我的二维码</string>
+    <string name="info">菜单信息</string>
+
+    <string name="scan_recipient_qr">请输入提币地址</string>
+
+    <string name="about">这是比特币钱包应用示例.
+        <br />它使用 TestNet3 比特币网络，所有的币都没有实际价值。这个应用使用 BitcoinJ SDK。如果想要测试它，为此你需要获得一些测试比特币。
+        <br />但这不会造成一个问题。为此，请执行以下步骤：
+        <br />1. 点击您的比特币地址右侧的复制图标。
+        <br />2. 使用以下链接: &lt;a href=\&quot;http://faucet.xeno-genesis.com/\&quot;&gt;这里 &lt;/a> 或者 &lt;a href=\&quot;https://testnet.coinfaucet.eu/en/\&quot;&gt;这里 &lt;/a></string>
+</resources>

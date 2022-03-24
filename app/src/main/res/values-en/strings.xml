@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">BtcWallet</string>
+
+    <string name="init_tip">Initializing peer network…
+        \nIt may takes up to 15 minutes
+        \nBe patient, its only once</string>
+    <string name="show_qr_code">Show this code to sender</string>
+    <string name="about_title">About</string>
+    <string name="got_it">GOT IT</string>
+    <string name="my_wallet_address">My wallet address</string>
+    <string name="copied">Copied</string>
+    <string name="show_this_address_to_sender">Show this address to sender</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="send">SEND</string>
+    <string name="receive">Receive</string>
+    <string name="amount">Amount: </string>
+    <string name="to">To: </string>
+    <string name="select_recipient">Select recipient </string>
+    <string name="select_valid_amount">Select valid amount </string>
+    <string name="you_got_not_enough_coins">You got not enough coins </string>
+    <string name="btc_wallet">BTC Wallet</string>
+
+
+    <string name="scan_qr">menu_scan_qr</string>
+    <string name="my_qr_code">menu_my_qr</string>
+    <string name="info">menu_info</string>
+
+    <string name="scan_recipient_qr">Receiving Address</string>
+
+    <string name="about">This is sample Bitcoin Wallet application.
+        It uses TestNet3 bitcoin network where all coins got no real value. this app use BitcoinJ SDK. You probably wants to test it and for that you need get some test bitcoins.
+        \nIt\'s not a problem. For that follow next steps:
+        \n1. Click copy icon right to your bitcoin address.
+        \n2. Use following link: &lt;a href=\&quot;http://faucet.xeno-genesis.com/\&quot;&gt;here &lt;/a> or &lt;a href=\&quot;https://testnet.coinfaucet.eu/en/\&quot;&gt;here &lt;/a></string>
+</resources>

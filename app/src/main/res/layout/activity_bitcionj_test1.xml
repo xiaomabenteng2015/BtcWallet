@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_download_peers"
+        tools:visibility="gone" />
+
+    <include layout="@layout/layout_toolbar" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srlContent_AM"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_btc" />
+
+                    <TextView
+                        android:id="@+id/tvMyBalance_AM"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        tools:text="1.235324234234 BTC" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvMyAddress_AM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        tools:text="1DRnurMWfTWXL9oG8iVED8r6qubqPKw7Vj" />
+
+                    <ImageView
+                        android:id="@+id/ivCopy_AM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_content_copy_black_18dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivMyQRAddress_AM"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    tools:background="@android:color/holo_orange_light" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/show_this_address_to_sender" />
+
+                <TextView
+                    android:id="@+id/tvWalletFilePath_AM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawableLeft="@drawable/ic_insert_drive_file_black_24dp"
+                    android:drawablePadding="4dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    tools:text="data/data/some/das/ge/dsesdfwwea/sdvsvwewef/vqwrw.wallet" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/darker_gray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="24dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/withdraw"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_send_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/to"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/tvRecipientAddress_AM"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:hint="@string/scan_recipient_qr"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_send_title"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_scan"
+                        app:layout_constraintStart_toEndOf="@+id/tv_send_title"
+                        app:layout_constraintTop_toTopOf="@+id/tv_send_title" />
+
+                    <ImageView
+                        android:id="@+id/iv_scan"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_scan"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_send_title" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/amount_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/amount"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/etAmount_AM"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/etAmount_AM" />
+
+                    <EditText
+                        android:id="@+id/etAmount_AM"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:gravity="right"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="0.00"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/currency_tv"
+                        app:layout_constraintStart_toEndOf="@+id/amount_title_tv"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/currency_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="   BTC"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/etAmount_AM"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/etAmount_AM" />
+
+                    <Button
+                        android:id="@+id/btnSend_AM"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/send"
+                        app:layout_constraintTop_toBottomOf="@+id/etAmount_AM" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
